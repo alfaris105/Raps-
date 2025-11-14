@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Surat Nembak Keren</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        background: #ffe6f0;
+        color: #333;
+        overflow-x: hidden;
+    }
+    header {
+        background: #ff4d94;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+    header h1 {
+        margin: 0;
+    }
+    .container {
+        max-width: 700px;
+        margin: 30px auto;
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        text-align: center;
+        position: relative;
+    }
+    input, textarea, select {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+    }
+    button {
+        background: #ff4d94;
+        color: white;
+        border: none;
+        padding: 15px;
+        border-radius: 8px;
+        width: 100%;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+        margin-top: 10px;
+    }
+    button:hover {
+        background: #e60073;
+    }
+    .result {
+        margin-top: 30px;
+        padding: 20px;
+        border: 1px solid #ff99c2;
+        border-radius: 12px;
+        background: #fff0f5;
+        white-space: pre-wrap;
+        position: relative;
+        min-height: 120px;
+    }
+    /* Hati animasi */
+    .heart {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: red;
+        transform: rotate(-45deg);
+        top: 0;
+        left: 50%;
+        animation: float 2s ease-in-out infinite;
+        opacity: 0.7;
+    }
+    .heart::before,
+    .heart::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: red;
+        border-radius: 50%;
+    }
+    .heart::before { top: -10px; left: 0; }
+    .heart::after { top: 0; left: 10px; }
+
+    @keyframes float {
+        0% { transform: translateX(0) translateY(0) rotate(-45deg); opacity:0.7; }
+        50% { transform: translateX(50px) translateY(-50px) rotate(-45deg); opacity:1; }
+        100% { transform: translateX(-50px) translateY(-100px) rotate(-45deg); opacity:0; }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Website Surat Nembak Raafi</h1>
+</header>
+
+<div class="container">
+    <h2>Buat Surat Nembak</h2>
+    <input type="text" id="namaKamu" placeholder="Nama Kamu">
+    <input type="text" id="namaDia" placeholder="Nama Cewek">
